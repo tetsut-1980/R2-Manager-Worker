@@ -1,15 +1,16 @@
 name = "r2-manager-worker"
+main = ".js" # 👈 Cloudflare Pagesではなく、Workersとして動かすための魔法の1行です
 compatibility_date = "2024-04-03"
 workers_dev = true
 
 [[d1_databases]]
 binding = "METADATA"
-database_name = "r2-manager-metadata"  # 👈 ここを書き換える
-database_id = "1f6511ad-3c7e-43f6-beed-831357c2c442"
+database_name = "r2-manager-metadata"
+database_id = "r2-manager-metadata"
 
 [[r2_buckets]]
 binding = "R2"
-bucket_name = "r2-bucket"      # 👈 ここを書き換える（例: my-photo-bucket）
+bucket_name = "r2-bucket"
 
 [[unsafe.bindings]]
 name = "RATE_LIMITER_READ"
