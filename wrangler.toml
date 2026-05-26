@@ -36,5 +36,4 @@ bucket = "./dist"
 
 [vars]
 PASSWORD = "tt19801208"
-ADMIN_PASSWORD = "tt19801208"
-SECRET = "tt19801208"
+password = "tt19801208"   # 👈 小文字バージョンも念のため追加
