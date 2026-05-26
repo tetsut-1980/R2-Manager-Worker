@@ -4,12 +4,12 @@ workers_dev = true
 
 [[d1_databases]]
 binding = "METADATA"
-database_name = "【あなたの実際のD1データベース名】"  # 👈 ここを書き換える
-database_id = "【あなたのD1のUUID（※分かればでOK、不明なら行ごと消しても可）】"
+database_name = "r2-manager-metadata"  # 👈 ここを書き換える
+database_id = "1f6511ad-3c7e-43f6-beed-831357c2c442"
 
 [[r2_buckets]]
 binding = "R2"
-bucket_name = "【あなたの実際のR2バケット名】"      # 👈 ここを書き換える（例: my-photo-bucket）
+bucket_name = "r2-bucket"      # 👈 ここを書き換える（例: my-photo-bucket）
 
 [[unsafe.bindings]]
 name = "RATE_LIMITER_READ"
