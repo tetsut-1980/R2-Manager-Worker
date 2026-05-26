@@ -35,6 +35,5 @@ simple = { limit = 60, period = 60 }
 bucket = "./dist"
 
 [vars]
-NO_AUTH = "true"
-DISABLE_AUTH = "true"
-SKIP_AUTH = "true"
+TEAM_DOMAIN = "https://floral-grass-47e6.cloudflareaccess.com" # 👈 Zero Trustの設定画面にあるドメイン
+POLICY_AUD = "fe106ad2-ae18-43ac-9af5-65cf985b9e65" # 👈 Zero TrustのApplication設定からコピーできる文字列
