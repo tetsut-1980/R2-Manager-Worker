@@ -1,56 +1,35 @@
-name = "r2"
-main = "worker/index.ts"
-compatibility_date = "2025-01-01"
-compatibility_flags = ["nodejs_compat"]
+name = "r2-manager-worker"
+main = "src/index.ts"
+compatibility_date = "2024-04-03"
 workers_dev = true
-preview_urls = false
 
-[build]
-command = "npm run build"
-cwd = "."
-
-[assets]
-directory = "dist"
-binding = "ASSETS"
+[[d1_databases]]
+binding = "METADATA"
+database_name = "r2-manager-metadata"
+database_id = "r2-manager-metadata"
 
 [[r2_buckets]]
 binding = "R2"
 bucket_name = "r2-bucket"
 
-# ============================================
-# RATE LIMITING CONFIGURATION
-# ============================================
-# Rate limiting bindings for API endpoint protection
-# Three tiers: READ (600/60s), WRITE (200/60s), DELETE (60/60s)
-[[ratelimits]]
+[[unsafe.bindings]]
 name = "RATE_LIMITER_READ"
+type = "ratelimit"
 namespace_id = "1001"
 simple = { limit = 600, period = 60 }
 
-[[ratelimits]]
+[[unsafe.bindings]]
 name = "RATE_LIMITER_WRITE"
+type = "ratelimit"
 namespace_id = "1002"
 simple = { limit = 200, period = 60 }
 
-[[ratelimits]]
+[[unsafe.bindings]]
 name = "RATE_LIMITER_DELETE"
+type = "ratelimit"
 namespace_id = "1003"
 simple = { limit = 60, period = 60 }
 
-# D1 database for job history metadata
-[[d1_databases]]
-binding = "METADATA"
-database_name = "r2-manager-metadata"
-database_id = "1f6511ad-3c7e-43f6-beed-831357c2c442"
-
-[observability]
-[observability.logs]
-enabled = true
-head_sampling_rate = 1
-persist = true
-invocation_logs = true
-
-[observability.traces]
-enabled = true
-head_sampling_rate = 1
-persist = true
+[assets]
+directory = "./dist"
+binding = "ASSETS"
