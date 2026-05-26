@@ -35,5 +35,6 @@ simple = { limit = 60, period = 60 }
 bucket = "./dist"
 
 [vars]
-PASSWORD = "tt19801208"
-password = "tt19801208"   # 👈 小文字バージョンも念のため追加
+NO_AUTH = "true"
+DISABLE_AUTH = "true"
+SKIP_AUTH = "true"
