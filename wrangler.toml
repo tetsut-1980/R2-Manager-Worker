@@ -31,4 +31,3 @@ simple = { limit = 60, period = 60 }
 
 [assets]
 directory = "./dist"
-binding = "ASSETS"
