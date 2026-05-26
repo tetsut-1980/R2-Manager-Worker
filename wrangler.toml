@@ -1,34 +1,5 @@
 name = "r2-manager-worker"
-main = ".js" # 👈 Cloudflare Pagesではなく、Workersとして動かすための魔法の1行です
 compatibility_date = "2024-04-03"
-workers_dev = true
-
-[[d1_databases]]
-binding = "METADATA"
-database_name = "r2-manager-metadata"
-database_id = "r2-manager-metadata"
-
-[[r2_buckets]]
-binding = "R2"
-bucket_name = "r2-bucket"
-
-[[unsafe.bindings]]
-name = "RATE_LIMITER_READ"
-type = "ratelimit"
-namespace_id = "1001"
-simple = { limit = 600, period = 60 }
-
-[[unsafe.bindings]]
-name = "RATE_LIMITER_WRITE"
-type = "ratelimit"
-namespace_id = "1002"
-simple = { limit = 200, period = 60 }
-
-[[unsafe.bindings]]
-name = "RATE_LIMITER_DELETE"
-type = "ratelimit"
-namespace_id = "1003"
-simple = { limit = 60, period = 60 }
 
 [assets]
 directory = "./dist"
