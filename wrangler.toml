@@ -1,5 +1,4 @@
 name = "r2-manager-worker"
-main = "functions/[[path]].ts"
 compatibility_date = "2024-04-03"
 workers_dev = true
 
