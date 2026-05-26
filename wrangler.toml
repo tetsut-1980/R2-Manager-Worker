@@ -34,4 +34,6 @@ simple = { limit = 60, period = 60 }
 directory = "./dist"
 
 [vars]
-PASSWORD = "tt19801208" # 👈 ここにログインで使いたいパスワードを書いてください（例: "mysecret123"）
+PASSWORD = "tt19801208"
+ADMIN_PASSWORD = "tt19801208"
+SECRET = "tt19801208"
