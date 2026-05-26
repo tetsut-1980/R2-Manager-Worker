@@ -41,7 +41,7 @@ simple = { limit = 60, period = 60 }
 [[d1_databases]]
 binding = "METADATA"
 database_name = "r2-manager-metadata"
-database_id = "117f108b-f2f0-46c1-9c15-560d11b0a7dd"
+database_id = "1f6511ad-3c7e-43f6-beed-831357c2c442"
 
 [[routes]]
 pattern = "r2.adamic.tech"
