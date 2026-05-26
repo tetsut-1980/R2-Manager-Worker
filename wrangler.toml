@@ -43,6 +43,12 @@ binding = "METADATA"
 database_name = "r2-manager-metadata"
 database_id = "1f6511ad-3c7e-43f6-beed-831357c2c442"
 
+[workers_dev]
+true
+
+[[routes]]
+pattern = "r2-manager-worker.tsukada.workers.dev"
+
 [observability]
 [observability.logs]
 enabled = true
