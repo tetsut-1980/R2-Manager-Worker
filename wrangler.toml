@@ -36,4 +36,4 @@ bucket = "./dist"
 
 [vars]
 TEAM_DOMAIN = "floral-grass-47e6.cloudflareaccess.com" # 👈 Zero Trustの設定画面にあるドメイン
-POLICY_AUD = "be26fd2e-1f2a-4614-9c35-ac97bda245eb" # 👈 Zero TrustのApplication設定からコピーできる文字列
+POLICY_AUD = "d3531832-c1f7-492f-6a8f-11557deb023b" # 👈 Zero TrustのApplication設定からコピーできる文字列
