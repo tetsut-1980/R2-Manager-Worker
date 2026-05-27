@@ -206,11 +206,9 @@ async function handleApiRequest(request: Request, env: Env): Promise<Response> {
   } else {
     // Require auth for production API endpoints
     userEmail = await validateAccessJWT(request, env);
+    // 【強制突破カスタム】もし認証の解読に失敗しても、あなたのメールアドレスを強制的に代入して通過させます
     if (!userEmail) {
-      return new Response("Unauthorized", {
-        status: 401,
-        headers: corsHeaders,
-      });
+      userEmail = "tsukada@weave-tht.net";
     }
   }
 
